@@ -1,8 +1,8 @@
 {
   "name": "dead-majors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "when deriving the next version to be semanticaly released - don't bump the major version",
-  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
+  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me), Jay Baker <logikal@gmail.com>",
   "bugs": {
     "url": "https://github.com/logikaljay/dead-majors/issues"
   },
