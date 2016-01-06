@@ -1,9 +1,10 @@
 {
-  "name": "nomajor-commit-analyzer",
-  "description": "derive next semantic version from commits",
-  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me), Jay Baker <logikal@gmail.com>",
+  "name": "dead-majors",
+  "version": "2.0.0",
+  "description": "when deriving the next version to be semanticaly released - don't bump the major version",
+  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
   "bugs": {
-    "url": "https://github.com/logikaljay/nomajor-commit-analyzer/issues"
+    "url": "https://github.com/logikaljay/dead-majors/issues"
   },
   "config": {
     "nyc": {
@@ -35,7 +36,7 @@
     "standard": "^4.2.1",
     "tap": "^1.2.0"
   },
-  "homepage": "https://github.com/logikaljay/nomajor-commit-analyzer#readme",
+  "homepage": "https://github.com/logikaljay/dead-majors#readme",
   "keywords": [
     "semantic-release",
     "author",
@@ -52,7 +53,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/logikaljay/nomajor-commit-analyzer.git"
+    "url": "git+https://github.com/logikaljay/dead-majors.git"
   },
   "scripts": {
     "build": "rimraf dist && mkdirp dist && babel src --out-dir dist",
@@ -65,5 +66,8 @@
     "test:suite": "nyc tap --no-cov .test/{scenarios,specs}/*.js",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "directories": {
+    "test": "test"
   }
 }
