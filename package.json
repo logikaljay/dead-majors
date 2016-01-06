@@ -1,9 +1,9 @@
 {
-  "name": "@semantic-release/commit-analyzer",
+  "name": "nomajor-commit-analyzer",
   "description": "derive next semantic version from commits",
-  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
+  "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me), Jay Baker <logikal@gmail.com>",
   "bugs": {
-    "url": "https://github.com/semantic-release/commit-analyzer/issues"
+    "url": "https://github.com/logikaljay/nomajor-commit-analyzer/issues"
   },
   "config": {
     "nyc": {
@@ -11,21 +11,31 @@
         ".test",
         "node_modules"
       ]
+    },
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   },
   "dependencies": {
     "conventional-changelog": "0.0.17"
   },
   "devDependencies": {
     "babel": "^5.5.8",
+    "commitizen": "^2.4.6",
+    "condition-circle": "^1.2.0",
     "coveralls": "^2.11.2",
+    "cz-conventional-changelog": "^1.1.5",
     "mkdirp": "^0.5.1",
     "nyc": "^3.0.0",
     "rimraf": "^2.4.0",
+    "semantic-release": "^4.3.5",
     "standard": "^4.2.1",
     "tap": "^1.2.0"
   },
-  "homepage": "https://github.com/semantic-release/commit-analyzer#readme",
+  "homepage": "https://github.com/logikaljay/nomajor-commit-analyzer#readme",
   "keywords": [
     "semantic-release",
     "author",
@@ -42,7 +52,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/semantic-release/commit-analyzer.git"
+    "url": "git+https://github.com/logikaljay/nomajor-commit-analyzer.git"
   },
   "scripts": {
     "build": "rimraf dist && mkdirp dist && babel src --out-dir dist",
@@ -52,6 +62,8 @@
     "pretest:suite": "npm run build && npm run build:tests",
     "test": "npm run test:style && npm run test:suite",
     "test:style": "standard",
-    "test:suite": "nyc tap --no-cov .test/{scenarios,specs}/*.js"
+    "test:suite": "nyc tap --no-cov .test/{scenarios,specs}/*.js",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }

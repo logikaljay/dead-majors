@@ -11,7 +11,8 @@ module.exports = function (pluginConfig, {commits}, cb) {
 
   .every((commit) => {
     if (commit.breaks.length) {
-      type = 'major'
+      // type = 'major'
+      type = 'minor'
       return false
     }
 
