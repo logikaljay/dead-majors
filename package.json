@@ -1,6 +1,6 @@
 {
   "name": "dead-majors",
-  "version": "2.0.0",
+  "version": "1.0.1",
   "description": "when deriving the next version to be semanticaly released - don't bump the major version",
   "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
   "bugs": {
