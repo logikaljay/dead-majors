@@ -1,5 +1,5 @@
 const { parseRawCommit } = require('conventional-changelog/lib/git')
-const { log } = require('npmlog')
+var log = require('npmlog')
 
 module.exports = function (pluginConfig, {commits}, cb) {
   let type = null

@@ -21,7 +21,8 @@
     "verifyConditions": "condition-circle"
   },
   "dependencies": {
-    "conventional-changelog": "0.0.17"
+    "conventional-changelog": "0.0.17",
+    "npmlog": "^2.0.1"
   },
   "devDependencies": {
     "babel": "^5.5.8",
